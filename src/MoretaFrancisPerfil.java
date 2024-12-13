@@ -52,6 +52,10 @@ public class MoretaFrancisPerfil {
         this.funFacts = funFacts;
     }
 
+    /**
+     * Devuelve una presentacion formateada de la informacion del perfil.
+     * @return String con los detalles del perfil.
+     */
     public String formatoPerfil() {
         StringBuilder sb = new StringBuilder();
         sb.append("Nombre: ").append(name).append("\n");

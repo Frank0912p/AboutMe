@@ -34,6 +34,17 @@ public class MoretaFrancisMain {
             }
         } while (opcion != 4);
     }
+
+    /**
+     * Solicita y valida la opción que escoje el usuario dentro de un rango específico.
+     * Muestra un menú al usuario y le pide que ingrese un número entero.
+     * Verifica que el valor esté dentro del rango especificado (min y max) antes de aceptarlo.
+     *
+     * @param menu El texto del menú que se mostrará al usuario.
+     * @param min El valor mínimo aceptable para la opción.
+     * @param max El valor máximo aceptable para la opción.
+     * @return El valor entero ingresado por el usuario que está dentro del rango especificado.
+     */
     public int opcionDeUsuario(String menu, int min, int max) {
         Scanner input = new Scanner(System.in);
         int value = 0;
