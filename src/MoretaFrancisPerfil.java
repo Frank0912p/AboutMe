@@ -6,7 +6,14 @@ public class MoretaFrancisPerfil {
     private String[] hobbies;
     private String[] foods;
     private String[] funFacts;
-//Declaramos el metodo constructor con parametros
+    /**
+     * Constructor para inicializar un perfil con nombre, hobbies, comidas favoritas y datos curiosos.
+     * @param name Nombre del perfil.
+     * @param story Historia del perfil.
+     * @param hobbies Lista de hobbies.
+     * @param foods Lista de comidas favoritas.
+     * @param funFacts Lista de datos curiosos.
+     */
     public MoretaFrancisPerfil(String name, String story, String[] hobbies, String[] foods, String[] funFacts) {
         this.name = name;
         this.story = story;
