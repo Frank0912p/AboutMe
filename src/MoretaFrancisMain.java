@@ -12,6 +12,30 @@ public class MoretaFrancisMain {
                 new String[]{"\uD83C\uDFCB\uFE0F", "\uD83E\uDDD7\u200D♀\uFE0F", "\uD83D\uDEB5\u200D♀\uFE0F"},
                 new String[]{"\uD83C\uDF63", "\uD83C\uDF2D", "\uD83C\uDF2F"},
                 new String[]{"Me gustan las vacas", "Estudie en Ecuador", "Me gusta el invierno"});
+        int opcion;
+        String menu = "Menu AboutMe " + myMoretaFrancisPerfil.getName() + "\n [1] Story\n [2] Favorites\n [3] Fun Fact\n [4] Salir";
         System.out.println(myMoretaFrancisPerfil.formatoPerfil());
+
+        do {
+            opcion = opcionDeUsuario(menu, 1, 4);
+            switch (opcion) {
+                case 1:
+                    System.out.println(myMoretaFrancisPerfil.getStory());
+                    break;
+                case 2:
+                    System.out.println(String.join(", ", myMoretaFrancisPerfil.getHobbies()) + ", "+ (String.join(", ", myMoretaFrancisPerfil.getFoods())));
+                    break;
+                case 3:
+                    System.out.println((String.join(", ", myMoretaFrancisPerfil.getRandomFunFact())));
+                    break;
+                case 4:
+                    System.out.println("Saliendo del programa...");
+                    break;
+            }
+        } while (opcion != 4);
+    }
+    public int opcionDeUsuario(String menu, int min, int max) {
+        int value = 0;
+        return value;
     }
 }
