@@ -35,7 +35,25 @@ public class MoretaFrancisMain {
         } while (opcion != 4);
     }
     public int opcionDeUsuario(String menu, int min, int max) {
+        Scanner input = new Scanner(System.in);
         int value = 0;
+        boolean exit = false;
+
+        do {
+            System.out.println(menu);
+            if (input.hasNextInt()) {
+                value = input.nextInt();
+                input.nextLine();
+                if (value>=min && value<=max){
+                    exit = true;
+                }else{
+                    System.out.println("ERROR: Valor fuera de rango "+min+"..."+max);
+                }
+            } else {
+                System.out.println("ERROR: No has introducido un entero");
+                input.nextLine();
+            }
+        }while(!exit);
         return value;
     }
 }
